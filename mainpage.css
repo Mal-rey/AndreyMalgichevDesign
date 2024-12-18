@@ -1,0 +1,169 @@
+﻿@font-face {
+	font-family: "PlusJakartaSansUpper";
+	src: url(fonts/PlusJakartaSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: "InstrumentSansReg";
+	src: url(fonts/InstrumentSans-Regular.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+/* Nav Menu */
+
+nav	{
+	margin: 15px 0 0 15px;
+	position: fixed;
+	z-index: 2;
+}
+
+a {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+#navPageButton {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	column-gap: 3.5%;
+	list-style-type: none;
+}
+
+*#homeButton {
+	position: relative;
+	padding: 3.2vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: rgba(62, 47, 91);
+	box-shadow: 0.4vw 0.4vw 0.4vw rgba(62, 47, 91, .5);
+}
+
+*#homeButton::after {
+	content: '';
+	position: absolute;
+	width: 90%; 
+	height: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-image: url('images/navBarImage.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#homeButton:hover {
+	background: linear-gradient(-95deg, rgba(227, 172, 57), transparent, rgba(179, 73, 150), transparent, rgba(227, 172, 57));
+	background-size: 50vw;
+	animation: homeButtonGradientAnimation 3s infinite linear;
+}
+
+@keyframes homeButtonGradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 110% 50%;
+	}
+}
+
+.topNavButton {
+	position: relative;
+	padding: 1.5vw 4.8vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	color: rgba(62, 47, 91); 
+	border-radius: 30px; 
+	font-family: "InstrumentSansReg";
+	font-size: 0.8vw;
+}
+.topNavButton::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	margin: -0.38vw;
+	border-radius: 30px;
+	background-image: linear-gradient(-95deg, rgba(179, 73, 150), rgba(227, 172, 57));
+	z-index: -1;
+}
+
+.topNavButton:hover{
+	z-index: 0;
+	color: #fff;
+}
+
+.buttonConstSize {
+	position: absolute;
+}
+
+
+
+/* Header */
+
+header {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: end;
+}
+
+#frontPageInteraction {
+	position: absolute;
+	min-height:	720px;
+	height: 100vh;
+	width: 100%;
+	border: 5px solid red;
+}
+
+#frontPageCanvas {
+	height: 100%;
+	width: 100%;
+}
+
+#intro {
+	margin: 0 0 15px 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	font-family: "PlusJakartaSansUpper";
+	font-size: 4vw;
+	color: rgba(62, 47, 91);
+}
+
+.GradientColor {
+	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57), rgb(179, 73, 150));
+	background-size: 50vw;
+	color: transparent;
+	background-clip: text;
+	animation: GradientColorGradientAnimation 3s infinite linear;
+}
+
+@keyframes GradientColorGradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	100% {
+		background-position: 250% 50%;
+	}
+}
