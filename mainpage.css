@@ -4,6 +4,16 @@
 }
 
 @font-face {
+	font-family: "PlusJakartaSansReg";
+	src: url(fonts/PlusJakartaSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "PlusJakartaSansMed";
+	src: url(fonts/PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
 	font-family: "InstrumentSansReg";
 	src: url(fonts/InstrumentSans-Regular.ttf);
 }
@@ -14,6 +24,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 
 
 /* Nav Menu */
@@ -21,7 +35,7 @@
 nav	{
 	margin: 15px 0 0 15px;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 }
 
 a {
@@ -38,7 +52,7 @@ a {
 	list-style-type: none;
 }
 
-*#homeButton {
+#homeButton {
 	position: relative;
 	padding: 3.2vw;
 	display: flex;
@@ -49,7 +63,7 @@ a {
 	box-shadow: 0.4vw 0.4vw 0.4vw rgba(62, 47, 91, .5);
 }
 
-*#homeButton::after {
+#homeButton::after {
 	content: '';
 	position: absolute;
 	width: 90%; 
@@ -75,7 +89,7 @@ a {
 	}
 
 	100% {
-		background-position: 110% 50%;
+		background-position: -50vw 50%;
 	}
 }
 
@@ -123,6 +137,7 @@ header {
 	flex-direction: row;
 	justify-content: start;
 	align-items: end;
+	z-index: 2;
 }
 
 #frontPageInteraction {
@@ -130,7 +145,6 @@ header {
 	min-height:	720px;
 	height: 100vh;
 	width: 100%;
-	border: 5px solid red;
 }
 
 #frontPageCanvas {
@@ -164,6 +178,154 @@ header {
 	}
 
 	100% {
-		background-position: 250% 50%;
+		background-position: 50vw 50%;
 	}
 }
+
+
+
+/* Three.js Body */
+
+#bodyCanvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+
+
+/* About */
+
+.contentSpacing {
+	margin-top: 20vw;
+	margin-bottom: 20vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#aboutContent {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#aboutTopContent {
+	width: 50vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	column-gap: 3.5%;
+}
+
+#aboutImage {
+	position: relative;
+	padding: 5vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57), rgb(179, 73, 150));
+	background-size: 50vw;
+	box-shadow: 0.4vw 0.4vw 0.4vw rgba(62, 47, 91, .5);
+	border-radius: 50%;
+	animation: GradientColorGradientAnimation 2s infinite linear;
+	top: 0;
+	transition: top 1s;
+}
+
+#aboutImage::after {
+	content: '';
+	position: absolute;
+	width: 90%; 
+	height: 90%;
+	border-radius: 50%;
+	background-image: linear-gradient(0deg, rgba(179, 73, 150), #fff);
+	animation: AboutImageWobble 1.5s infinite linear;
+}
+
+@keyframes AboutImageWobble{
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	12% {
+		transform: rotate(0deg);
+	}
+
+	24% {
+		transform: rotate(-21deg);
+	}
+
+	36% {
+		transform: rotate(-21deg);
+	}
+
+	48% {
+		transform: rotate(8deg);
+	}
+
+	60% {
+		transform: rotate(8deg);
+	}
+
+	72% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#aboutContent:hover #aboutImage {
+	top: -1.5vw;
+}
+
+#aboutSectionLayout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.sectionHeaderText {
+	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57));
+	color: transparent;
+	background-clip: text;
+	font-family: "PlusJakartaSansReg";
+	font-size: 2.3vw;
+}
+
+.contentDivBreakpoint{
+	width: 60vw;
+	border-image: linear-gradient(-95deg, rgb(179, 73, 150) 0%, rgb(227, 172, 57) 100%) 1;
+	border-width: 0.01vw;
+	border-style: solid;
+}
+
+.sectionIntroText {
+	padding-top: 0.1vw;
+	padding-bottom: 0.6vw;
+	color: rgba(62, 47, 91);
+	font-family: "PlusJakartaSansMed";
+	font-size: 4vw;
+}
+
+.sectionContentText {
+	padding-top: 0.8vw;
+	width: 50vw;
+	color: rgba(62, 47, 91);
+	font-family: "InstrumentSansReg";
+	font-size: 1.6vw;
+}
+
+
+
+/* Education */
