@@ -18,6 +18,16 @@
 	src: url(fonts/InstrumentSans-Regular.ttf);
 }
 
+@font-face {
+	font-family: "InstrumentSansMedItalic";
+	src: url(fonts/InstrumentSans-MediumItalic.ttf);
+}
+
+@font-face {
+	font-family: "InstrumentSansBold";
+	src: url(fonts/InstrumentSans-Bold.ttf);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -28,19 +38,23 @@ html {
 	scroll-behavior: smooth;
 }
 
-
-
-/* Nav Menu */
-
-nav	{
-	margin: 15px 0 0 15px;
-	position: fixed;
-	z-index: 3;
+img {
+	user-select: none;
+	-webkit-user-drag: none;
 }
 
 a {
 	user-select: none;
 	-webkit-user-drag: none;
+}
+
+
+
+/* Nav Menu */
+nav {
+	margin: 15px 0 0 15px;
+	position: fixed;
+	z-index: 3;
 }
 
 #navPageButton {
@@ -198,15 +212,15 @@ header {
 /* About */
 
 .contentSpacing {
-	margin-top: 20vw;
-	margin-bottom: 20vw;
+	margin-top: 30vw;
+	margin-bottom: 30vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#aboutContent {
+.middleContentSizing {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -284,11 +298,11 @@ header {
 	}
 }
 
-#aboutContent:hover #aboutImage {
+#aboutImageHover:hover #aboutImage {
 	top: -1.5vw;
 }
 
-#aboutSectionLayout {
+.sectionIntroTextLayout {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -328,4 +342,114 @@ header {
 
 
 
-/* Education */
+/* Experience */
+
+#experienceTopContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.startcontentSizing {
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.contentDivBreakpointLonger {
+	width: 80vw;
+	border-image: linear-gradient(-95deg, rgb(179, 73, 150) 0%, rgb(227, 172, 57) 100%) 1;
+	border-width: 0.01vw;
+	border-style: solid;
+}
+
+.alignBottomContent {
+	margin-top: 3vw;
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#experienceSliderArea {
+	margin-right: 4vw;
+	width: 3vw;
+	height: auto;
+	background: linear-gradient(white, white) padding-box, linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57)) border-box;
+	border-radius: 30px;
+	border: 0.5vw solid transparent;
+}
+
+#experienceSliderAnimation {
+	position: sticky;
+	top: 10vw;
+	margin-top: 1vw;
+	padding: 1vw;
+	background: radial-gradient( circle at 50% 0, rgb(255 255 255 / 50%), rgb(255 255 255 / 0%) 70.71% ), radial-gradient( circle at 6.7% 75%, rgb(179 73 150 / 50%), rgb(179 73 150 / 0%) 70.71% ), radial-gradient( circle at 93.3% 75%, rgb(227 172 57 / 50%), rgb(227 172 57 / 0%) 70.71% ) beige;
+	border-radius: 50%;
+}
+
+#experienceBottomContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+.experienceFlexItem {
+	margin-top: 4vw;
+	margin-bottom: 4vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.experienceFlexImage {
+	width: 10vw;
+	padding: 1vw;
+	background: #fff;
+	border-color: rgba(62, 47, 91);
+	border-width: 0.6vw;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+.experienceFlexItemContent {
+	padding-left: 4vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgba(62, 47, 91);
+	font-family: "InstrumentSansBold";
+	font-size: 1.6vw;
+}
+
+.experienceFlexItemDatesContent {
+	font-family: "InstrumentSansMedItalic";
+	font-size: 1.4vw;
+}
+
+.experimentFlexDetails {
+	padding-top: 0.4vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	font-family: "InstrumentSansReg";
+	font-size: 1.4vw;
+}
+
+
+
+/* Skills */
+
+
+
+/* Projects */
+
+
+
+/* Contacts */
