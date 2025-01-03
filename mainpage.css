@@ -310,6 +310,7 @@ header {
 }
 
 .sectionHeaderText {
+	padding-top: 0.1vw;
 	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57));
 	color: transparent;
 	background-clip: text;
@@ -325,7 +326,6 @@ header {
 }
 
 .sectionIntroText {
-	padding-top: 0.1vw;
 	padding-bottom: 0.6vw;
 	color: rgba(62, 47, 91);
 	font-family: "PlusJakartaSansMed";
@@ -368,6 +368,7 @@ header {
 
 .alignBottomContent {
 	margin-top: 3vw;
+	margin-bottom: 3vw;
 	width: 80vw;
 	display: flex;
 	flex-direction: row;
@@ -377,8 +378,12 @@ header {
 
 #experienceSliderArea {
 	margin-right: 4vw;
-	width: 3vw;
+	width: 3.3vw;
 	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
 	background: linear-gradient(white, white) padding-box, linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57)) border-box;
 	border-radius: 30px;
 	border: 0.5vw solid transparent;
@@ -446,7 +451,76 @@ header {
 
 /* Skills */
 
+#skillsBottomContent {
+	width: 68vw;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
+.skillsSoftwareRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	column-gap: 3.5%;
+	background: #fff;
+}
+
+.skillsDesignSoftwareRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+}
+.skillsSoftwareItemSizing {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(white, white) padding-box, linear-gradient(-95deg, rgba(62, 47, 91), rgba(62, 47, 91)) border-box;
+	border-radius: 30px;
+	border: 0.6vw solid transparent;
+	transition: all .2s;
+}
+
+.skillsSoftwareItemSizing:hover {
+	background: linear-gradient(rgba(62, 47, 91), rgba(62, 47, 91)) padding-box, linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57)) border-box;
+}
+
+.skillsSoftwareItemSizing:hover .skillsSoftwareImage { 
+	opacity: 20%; 
+}
+
+.skillsSoftwareItemSizing:hover .skillsSoftwareText { 
+	visibility: visible;
+}
+
+.skillsWebSoftwareItem	{
+	padding: 1.5vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.skillsSoftwareImage {
+	padding: 0.1vw;
+	width: 4vw;
+	opacity: 100%;
+	transition: all .2s;
+}
+
+.skillsSoftwareText {
+	position: absolute;
+	visibility: collapse;
+	color: #fff;
+	font-family: "InstrumentSansBold";
+	font-size: 0.9vw;
+	transition: all;
+}
 
 /* Projects */
 
