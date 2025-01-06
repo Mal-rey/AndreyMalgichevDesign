@@ -48,7 +48,17 @@ a {
 	-webkit-user-drag: none;
 }
 
+input {
+	color: rgba(62, 47, 91);
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+}
 
+textarea {
+	color: rgba(62, 47, 91);
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+}
 
 /* Nav Menu */
 nav {
@@ -130,7 +140,7 @@ nav {
 	z-index: -1;
 }
 
-.topNavButton:hover{
+.topNavButton:hover {
 	z-index: 0;
 	color: #fff;
 }
@@ -263,7 +273,7 @@ header {
 	animation: AboutImageWobble 1.5s infinite linear;
 }
 
-@keyframes AboutImageWobble{
+@keyframes AboutImageWobble {
 
 	0% {
 		transform: rotate(0deg);
@@ -527,3 +537,122 @@ header {
 
 
 /* Contacts */
+
+.alignBottomContentColumn {
+	margin-top: 3vw;
+	margin-bottom: 3vw;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+#contactsContent {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.contactsLabelRow {
+	padding: 1vw 0;
+}
+
+.contactsLabelFont {
+	padding-bottom: 0.8vw;
+	color: rgba(62, 47, 91);
+	font-family: "PlusJakartaSansReg";
+	font-size: 1.6vw;
+}
+.contactFormPadding {
+	padding-top: 0.8vw;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.contactFormInput {
+	width: 30vw;
+	padding: 0.8vw;
+	border-radius: 10px;
+	border: 0.2vw solid rgba(62, 47, 91); 
+	box-shadow: inset 0 0 0.4vw 0.1vw rgba(255, 255, 255);
+	transition: all 2s;
+}
+
+.contactFormInput:not(:focus):not(:placeholder-shown):invalid {
+	box-shadow: inset 0 0 0.2vw 0.1vw rgba(179, 73, 150), inset 0 0 0.2vw 0.1vw rgba(227, 172, 57);
+}
+
+.contactFormInput:not(:focus):not(:placeholder-shown):invalid ~ .contactFormInput_NoEmailValueError {
+	visibility: visible;
+}
+
+.contactFormInput:focus {
+	box-shadow: inset 0 0 0.2vw 0.1vw rgba(179, 73, 150), inset 0 0 0.2vw 0.1vw rgba(227, 172, 57);
+}
+
+::placeholder {
+	color: rgba(62, 47, 91);
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+	opacity: 50%;
+}
+
+.contactFormInput_NoNameValueError,	.contactFormInput_NoEmailValueError {
+	visibility: hidden;
+	color: red;
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+}
+
+.contactFormTextarea {
+	resize: none;
+	padding-bottom: 5vw;
+	width: 40vw;
+}
+
+.contactsFormButtons {
+	cursor: pointer;
+	padding: 1vw 2.5vw;
+	border-radius: 10px;
+	color: rgba(62, 47, 91);
+	background-color: transparent;
+	background: none;
+	border: 0.2vw solid;
+	border-image: 0.2vw rgba(62, 47, 91);
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+	transition: all .2s;
+}
+
+.contactsFormButtons:hover {
+	color: #fff;
+	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57));
+	font-family: "InstrumentSansReg";
+	font-size: 1vw;
+}
+
+#contactsButtonsContent {
+	padding: 5vw 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	column-gap: 2%;
+}
+
+.contactsImage {
+	opacity: 100%;
+	width: 3.5vw;
+	transition: all .2s;
+}
+
+.contactsImage:hover {
+	opacity: 50%;
+}
