@@ -49,12 +49,14 @@ a {
 }
 
 input {
+	background-color: #fff;
 	color: rgba(62, 47, 91);
 	font-family: "InstrumentSansReg";
 	font-size: 1vw;
 }
 
 textarea {
+	background-color: #fff;
 	color: rgba(62, 47, 91);
 	font-family: "InstrumentSansReg";
 	font-size: 1vw;
@@ -190,7 +192,7 @@ header {
 
 .GradientColor {
 	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57), rgb(179, 73, 150));
-	background-size: 50vw;
+	background-size: 200%;
 	color: transparent;
 	background-clip: text;
 	animation: GradientColorGradientAnimation 3s infinite linear;
@@ -202,7 +204,7 @@ header {
 	}
 
 	100% {
-		background-position: 50vw 50%;
+		background-position: -200% 50%;
 	}
 }
 
@@ -222,8 +224,8 @@ header {
 /* About */
 
 .contentSpacing {
-	margin-top: 30vw;
-	margin-bottom: 30vw;
+	margin-top: 25vw;
+	margin-bottom: 25vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -255,7 +257,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57), rgb(179, 73, 150));
-	background-size: 50vw;
+	background-size: 200%;
 	box-shadow: 0.4vw 0.4vw 0.4vw rgba(62, 47, 91, .5);
 	border-radius: 50%;
 	animation: GradientColorGradientAnimation 2s infinite linear;
@@ -321,11 +323,13 @@ header {
 
 .sectionHeaderText {
 	padding-top: 0.1vw;
-	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57));
+	background: linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57), rgb(179, 73, 150));
+	background-size: 200%;
 	color: transparent;
 	background-clip: text;
 	font-family: "PlusJakartaSansReg";
 	font-size: 2.3vw;
+	animation: GradientColorGradientAnimation 3s infinite linear;
 }
 
 .contentDivBreakpoint{
@@ -353,6 +357,11 @@ header {
 
 
 /* Experience */
+
+.experienceSpacing {
+	margin-top: 0vw;
+	margin-bottom: 0vw;
+}
 
 #experienceTopContent {
 	display: flex;
@@ -447,7 +456,7 @@ header {
 	font-size: 1.4vw;
 }
 
-.experimentFlexDetails {
+.experienceFlexDetails {
 	padding-top: 0.4vw;
 	display: flex;
 	flex-direction: column;
@@ -460,6 +469,11 @@ header {
 
 
 /* Skills */
+
+.skillsSpacing {
+	margin-top: 8vw;
+	margin-bottom: 0vw;
+}
 
 #skillsBottomContent {
 	width: 68vw;
@@ -476,7 +490,6 @@ header {
 	justify-content: start;
 	align-items: center;
 	column-gap: 3.5%;
-	background: #fff;
 }
 
 .skillsDesignSoftwareRow {
@@ -528,15 +541,103 @@ header {
 	visibility: collapse;
 	color: #fff;
 	font-family: "InstrumentSansBold";
-	font-size: 0.9vw;
+	font-size: 0.8vw;
 	transition: all;
 }
 
+
+
 /* Projects */
+
+.projectsSpacing {
+	margin-top: 8vw;
+	margin-bottom: 0;
+}
+
+.projectsBottomContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.projectsDescriptionContent {
+	margin-top: 3vw;
+	margin-bottom: 3vw;
+}
+
+.projectsDescriptionBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.contentDivBreakpointSideways {
+	padding: 6vw 0;
+	margin: 0 3vw;
+	border-image: linear-gradient(-95deg, rgb(179, 73, 150) 0%, rgb(227, 172, 57) 100%) 1;
+	border-width: 0.01vw;
+	border-style: solid;
+}
+
+.projectDescriptionText {
+	margin-right: 3vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+}
+
+.projectGIF {
+	padding: 0 3vw;
+	width: 25vw;
+	background: linear-gradient(white, white) padding-box, linear-gradient(-95deg, rgb(179, 73, 150), rgb(227, 172, 57)) border-box;
+	border: 0.3vw solid transparent;
+	border-radius: 30px;
+}
+
+.projectTech {
+	width: auto;
+	padding: 0.5vw 1vw;
+	margin-top: 1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: rgba(62, 47, 91);
+	border-radius: 30px;
+}
+
+.projectTechImage {
+	padding: 0 0.3vw;
+	width: 2vw;
+}
+
+.projectDetails {
+	width: 37vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+.projectButtonRow {
+	padding: 1vw 0;
+}
+
+.projectSiteGIFFile {
+	width: 35vw;
+	border: 0.3vw solid rgba(62, 47, 91);
+	border-radius: 30px;
+}
 
 
 
 /* Contacts */
+
+.contactsSpacing {
+	margin-top: 25vw;
+	margin-bottom: 0vw;
+}
 
 .alignBottomContentColumn {
 	margin-top: 3vw;
@@ -579,8 +680,8 @@ header {
 	width: 30vw;
 	padding: 0.8vw;
 	border-radius: 10px;
-	border: 0.2vw solid rgba(62, 47, 91); 
-	box-shadow: inset 0 0 0.4vw 0.1vw rgba(255, 255, 255);
+	border: 0.2vw solid rgba(62, 47, 91);
+	box-shadow: inset 0 0 0.4vw 0.1vw rgba(255, 255, 255, 0);
 	transition: all 2s;
 }
 
@@ -638,7 +739,7 @@ header {
 }
 
 #contactsButtonsContent {
-	padding: 5vw 0;
+	padding: 3vw 0;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
